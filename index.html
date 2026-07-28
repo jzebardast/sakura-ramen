@@ -1,145 +1,148 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakura Ramen</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="Icon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakura Ramen – The Best Ramen in Town</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-logo">🌸</div>
-    <ul class="nav-links">
-      <li><a href="#menu">MENU</a></li>
-      <li><a href="#location">LOCATIONS</a></li>
-      <li><a href="#about">ABOUT</a></li>
-    </ul>
-    <a href="tel:+4917654564534" class="nav-phone">📞 0176 54564534</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="Sakura Ramen home">
+      <span class="logo-flower" aria-hidden="true">🌸</span>
+    </a>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <img class="hero-bg" src="data:image/png;base64,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" alt="Ramen Bowl" />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>SAKURA RAMEN</h1>
-      <p class="hero-sub">THE BEST RAMEN IN TOWN</p>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">MENU</a>
+      <a href="#location">LOCATIONS</a>
+      <a href="#">ABOUT</a>
+    </nav>
+
+    <a href="tel:+4917654564534" class="cta-call">
+      <svg class="phone-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.3 11.3 0 003.54.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.3 11.3 0 00.57 3.54 1 1 0 01-.25 1.01l-2.2 2.24z"/></svg>
+      <span>0176 54564534</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <picture>
+    <source media="(max-width: 700px)" srcset="images/hero-mobile.jpg">
+    <img src="images/hero-desktop.jpg" alt="Bowl of Sakura Ramen noodle soup" class="hero-img">
+  </picture>
+  <div class="hero-content">
+    <h1>SAKURA RAMEN</h1>
+    <p class="hero-sub">THE BEST RAMEN IN TOWN</p>
+  </div>
+</section>
+
+<section class="how-to-order">
+  <h2>HOW TO ORDER</h2>
+  <div class="steps">
+    <div class="step">
+      <svg viewBox="0 0 128 120" width="112" height="105" aria-hidden="true">
+        <rect x="4" y="55" width="120" height="14" rx="7" fill="#000"/>
+        <path d="M14 69c0 26 22.4 43 50 43s50-17 50-43z" fill="#FA3A5A"/>
+        <path d="M20 79c0 18 18 30 44 30s44-12 44-30" fill="none" stroke="#FFC34B" stroke-width="6"/>
+        <path d="M46 8l6 24M64 4v28M82 8l-6 24" stroke="#000" stroke-width="6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <p>Pick your<br>noodle</p>
     </div>
-  </section>
-
-  <!-- HOW TO ORDER -->
-  <section class="how-section" id="about">
-    <h2 class="red-title">HOW TO ORDER</h2>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="how-icon">
-          <svg width="70" height="70" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="55" r="22" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
-            <path d="M20 50 Q40 35 60 50" stroke="#333" stroke-width="2" fill="none"/>
-            <rect x="35" y="20" width="10" height="20" rx="3" fill="#FFD700"/>
-            <path d="M30 15 L50 15" stroke="#333" stroke-width="2"/>
-          </svg>
-        </div>
-        <p>Pick your<br>noodle</p>
-      </div>
-      <div class="how-step">
-        <div class="how-icon">
-          <svg width="70" height="70" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="40" cy="55" rx="25" ry="18" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
-            <path d="M15 55 Q40 40 65 55" stroke="#333" stroke-width="2" fill="none"/>
-            <path d="M35 25 Q35 15 40 10 Q45 15 45 25" stroke="#666" stroke-width="2" fill="none"/>
-            <path d="M28 30 Q28 22 33 18 Q38 22 38 30" stroke="#666" stroke-width="2" fill="none"/>
-            <path d="M42 30 Q42 22 47 18 Q52 22 52 30" stroke="#666" stroke-width="2" fill="none"/>
-          </svg>
-        </div>
-        <p>Pick your<br>broth</p>
-      </div>
-      <div class="how-step">
-        <div class="how-icon">
-          <svg width="70" height="70" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="40" cy="45" rx="25" ry="20" fill="#FFF9C4" stroke="#333" stroke-width="2"/>
-            <ellipse cx="40" cy="42" rx="15" ry="12" fill="#FFD700"/>
-            <ellipse cx="40" cy="40" rx="8" ry="6" fill="#FF8C00"/>
-          </svg>
-        </div>
-        <p>Add your<br>toppings</p>
-      </div>
+    <div class="step">
+      <svg viewBox="0 0 128 120" width="112" height="105" aria-hidden="true">
+        <rect x="4" y="55" width="120" height="14" rx="7" fill="#000"/>
+        <path d="M14 69c0 26 22.4 43 50 43s50-17 50-43z" fill="#C12839"/>
+        <circle cx="46" cy="90" r="4" fill="#000" opacity=".3"/>
+        <path d="M50 20c-4 6-4 12 0 18M64 14c-4 8-4 16 0 24M78 20c4 6 4 12 0 18" stroke="#000" stroke-width="5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <p>Pick your<br>broth</p>
     </div>
-  </section>
-
-  <!-- OUR MENU -->
-  <section class="menu-section" id="menu">
-    <h2 class="red-title">OUR MENU</h2>
-
-    <!-- Tonkotsu: image left -->
-    <div class="menu-item">
-      <div class="dish-img">
-        <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?w=400&q=85" alt="Tonkotsu Ramen" />
-      </div>
-      <div class="dish-info">
-        <h3>Tonkotsu Ramen</h3>
-        <div class="price-row"><span class="plabel">CHICKEN</span><span class="pprice">11.95€</span></div>
-        <div class="price-row"><span class="plabel">BEEF</span><span class="pprice">12.95€</span></div>
-        <div class="price-row"><span class="plabel">SHRIMP</span><span class="pprice">13.95€</span></div>
-      </div>
+    <div class="step">
+      <svg viewBox="0 0 128 120" width="112" height="105" aria-hidden="true">
+        <ellipse cx="46" cy="70" rx="42" ry="46" fill="#fff" stroke="#000" stroke-width="4"/>
+        <ellipse cx="86" cy="66" rx="34" ry="38" fill="#FFCF6D" stroke="#000" stroke-width="4"/>
+      </svg>
+      <p>Add your<br>toppings</p>
     </div>
+  </div>
+</section>
 
-    <!-- Spicy Miso: image right -->
-    <div class="menu-item reverse">
-      <div class="dish-info">
-        <h3>Spicy Miso Ramen</h3>
-        <div class="price-row"><span class="plabel">CHICKEN</span><span class="pprice">11.95€</span></div>
-        <div class="price-row"><span class="plabel">BEEF</span><span class="pprice">12.95€</span></div>
-        <div class="price-row"><span class="plabel">SHRIMP</span><span class="pprice">13.95€</span></div>
-      </div>
-      <div class="dish-img">
-        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=85" alt="Spicy Miso Ramen" />
-      </div>
-    </div>
+<section class="our-menu" id="menu">
+  <h2>OUR MENU</h2>
 
-    <!-- Shio: image left -->
-    <div class="menu-item">
-      <div class="dish-img">
-        <img src="https://images.unsplash.com/photo-1545935950-b7a28791ad7a?w=400&q=85" alt="Shio Ramen" />
-      </div>
-      <div class="dish-info">
-        <h3>Shio Ramen</h3>
-        <div class="price-row"><span class="plabel">CHICKEN</span><span class="pprice">11.95€</span></div>
-        <div class="price-row"><span class="plabel">BEEF</span><span class="pprice">12.95€</span></div>
-        <div class="price-row"><span class="plabel">SHRIMP</span><span class="pprice">13.95€</span></div>
-      </div>
+  <div class="menu-item">
+    <img src="images/tonkatsu.jpg" alt="Tonkatsu Ramen" class="dish-img">
+    <div class="dish-info">
+      <h3>Tonkatsu Ramen</h3>
+      <ul class="dish-prices">
+        <li><span>CHICKEN</span><span>11.95€</span></li>
+        <li><span>BEEF</span><span>12.95€</span></li>
+        <li><span>SHRIMP</span><span>13.95€</span></li>
+      </ul>
     </div>
+  </div>
 
-  </section>
+  <div class="menu-item reverse">
+    <img src="images/spicymiso.jpg" alt="Spicy Miso Ramen" class="dish-img">
+    <div class="dish-info">
+      <h3>Spicy Miso Ramen</h3>
+      <ul class="dish-prices">
+        <li><span>CHICKEN</span><span>11.95€</span></li>
+        <li><span>BEEF</span><span>12.95€</span></li>
+        <li><span>SHRIMP</span><span>13.95€</span></li>
+      </ul>
+    </div>
+  </div>
 
-  <!-- FIND US AT -->
-  <section class="location-section" id="location">
-    <h2 class="red-title">FIND US AT</h2>
-    <p class="address">📍 Kapuzinerstraße 31, München, 80337</p>
-    <div class="map-wrap">
-      <iframe
-        title="Sakura Ramen Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.5!2d11.5641!3d48.1271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75f5e6e4c6c9%3A0x0!2sKapuzinerstra%C3%9Fe+31%2C+80337+M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1700000000000"
-        width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+  <div class="menu-item">
+    <img src="images/shio.jpg" alt="Shio Ramen" class="dish-img">
+    <div class="dish-info">
+      <h3>Shio Ramen</h3>
+      <ul class="dish-prices">
+        <li><span>CHICKEN</span><span>11.95€</span></li>
+        <li><span>BEEF</span><span>12.95€</span></li>
+        <li><span>SHRIMP</span><span>13.95€</span></li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-left">
-      <img src="Logo.png" alt="Sakura Ramen" class="footer-logo-img" />
+<section class="find-us" id="location">
+  <h2>FIND US AT</h2>
+  <p class="address">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+    Kapuzinerstraße 31, München, 80337
+  </p>
+  <picture>
+    <source media="(max-width: 700px)" srcset="images/map-mobile.jpg">
+    <img src="images/map-desktop.jpg" alt="Map showing Sakura Ramen location" class="map-img">
+  </picture>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-flower" aria-hidden="true">🌸</span>
+      <span>SAKURA RAMEN</span>
     </div>
-    <div class="footer-social">
-      <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener" class="soc">TA</a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="soc">f</a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="soc">ig</a>
+    <div class="socials">
+      <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener" aria-label="Tripadvisor" class="social-icon tripadvisor">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="12" fill="#00B086"/><circle cx="7.2" cy="13.5" r="3.4" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="16.8" cy="13.5" r="3.4" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="7.2" cy="13.5" r="1.3" fill="#fff"/><circle cx="16.8" cy="13.5" r="1.3" fill="#fff"/><path d="M9 8.5h6M12 8.5V11" stroke="#fff" stroke-width="1.2"/></svg>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon facebook">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="12" fill="#1A4789"/><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.2c0-.8.2-1.4 1.4-1.4h1.5V5.3c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2.1H8.4v2.8h2.4V21h2.7z" fill="#fff"/></svg>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon instagram">
+        <svg viewBox="0 0 24 24" width="22" height="22"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FBE18A"/><stop offset="20%" stop-color="#FCBB45"/><stop offset="45%" stop-color="#F75274"/><stop offset="65%" stop-color="#D53692"/><stop offset="85%" stop-color="#8F39CE"/><stop offset="100%" stop-color="#5B4FE9"/></linearGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig)"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.2" fill="none" stroke="#fff" stroke-width="1.3"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.3"/><circle cx="15.4" cy="8.6" r="0.9" fill="#fff"/></svg>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>
